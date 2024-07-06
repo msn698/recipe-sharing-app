@@ -1,0 +1,61 @@
+<!-- frontend/manage-categories.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Categories</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        #successMessage, #errorMessage {
+            display: none; /* Hide initially */
+            margin-top: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        #successMessage {
+            background-color: #4CAF50;
+            color: white;
+        }
+        #errorMessage {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>Manage Categories</h2>
+
+    <!-- Add Category Form -->
+    <form id="addCategoryForm">
+        <label for="newCategoryName">New Category Name:</label>
+        <input type="text" id="newCategoryName" name="newCategoryName" required><br>
+        <button type="submit">Add Category</button>
+    </form>
+
+    <!-- Edit Category Form -->
+    <form id="editCategoryForm">
+        <label for="editCategorySelect">Select Category:</label>
+        <select id="editCategorySelect" name="editCategorySelect" required></select><br>
+        <label for="editCategoryName">New Category Name:</label>
+        <input type="text" id="editCategoryName" name="editCategoryName" required><br>
+        <button type="submit">Edit Category</button>
+    </form>
+
+    <!-- Delete Category Form -->
+    <form id="deleteCategoryForm">
+        <label for="deleteCategorySelect">Select Category:</label>
+        <select id="deleteCategorySelect" name="deleteCategorySelect" required></select><br>
+        <button type="submit">Delete Category</button>
+    </form>
+
+    <!-- Success and Error Messages -->
+    <div id="successMessage"></div>
+    <div id="errorMessage"></div>
+
+<!--    <ul id="categoryList"></ul> display all category 4 debugging-->
+
+    <script src="js/manage-categories.js"></script>
+</body>
+</html>
